@@ -6,20 +6,23 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="valfunc.js"></script>
 </head>
-<body id="bodyColor" class="bg-blue-100">
-    <div>
-        <form>
-            <label for="userEmail">Email</label><br>
-            <input id="userEmail" type="email"><br>
-            <label for="userPass">Password</label><br>
-            <input onfocus="show()" onblur="hide()" onkeyup="validatePass()" id="userPass" type="password" name="userPass" value="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"><br>
-            
+<body id="bodyColor" class="bg-yellow-300">
+    <div class="flex flex-col justify-center items-center space-y-10 p-5">
+        <form class="flex flex-col justify-center items-center space-y-3 p-5 border-4 w-1/2 bg-orange-300 border-black rounded-md">
+            <h1>PASSWORD VALIDATION</h1>
+            <label for="userEmail">Email</label>
+            <input id="userEmail" type="email">
+            <label for="userPass">Password</label>
+            <input onfocus="show()" onblur="hide()" onkeyup="validatePass()" id="userPass" type="password" name="userPass" value="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+            <div><button onclick="validatePass()">Submit</button></div>
         </form>
-        <div><button onclick="validatePass()">Submit</button></div>
-        <div id="length"class="h-20">Minimum 8 characters</div>
-        <div id="capital">Capital Letter</div>
-        <div id="lowerCaseLetter">Lowercase Letter</div>
-        <div id="numberAmount">Number</div>
+        
+        <div class="flex flex-col border-4 justify-center items-center space-y-3 w-1/2 p-10 bg-orange-300 border-black rounded-md">
+            <div id="length"class="">Minimum 8 characters</div>
+            <div id="capital">Capital Letter</div>
+            <div id="lowerCaseLetter">Lowercase Letter</div>
+            <div id="numberAmount">Number</div>
+        </div>
     </div>
 
 </body>
