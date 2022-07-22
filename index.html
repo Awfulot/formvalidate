@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="valfunc.js"></script>
+</head>
+<body id="bodyColor" class="bg-blue-100">
+    <div>
+        <form>
+            <label for="userEmail">Email</label><br>
+            <input id="userEmail" type="email"><br>
+            <label for="userPass">Password</label><br>
+            <input onfocus="show()" onblur="hide()" onkeyup="validatePass()" id="userPass" type="password" name="userPass" value="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"><br>
+            
+        </form>
+        <div><button onclick="validatePass()">Submit</button></div>
+        <div id="length"class="h-20">Minimum 8 characters</div>
+        <div id="capital">Capital Letter</div>
+        <div id="lowerCaseLetter">Lowercase Letter</div>
+        <div id="numberAmount">Number</div>
+    </div>
+
+</body>
+</html>
