@@ -16,7 +16,8 @@ function validatePass() {
     var numbers = /[0-9]/g;
  
     //Check Password Length and change color accordingly
-    if(pass.value.length <= 8) {
+    //For some reason <=8 doesn't work here, it needs to be 7 to have a minimum of 8
+    if(pass.value.length <= 7) {
         document.getElementById("length").style.color ="red";
         hasMinCharacters = false;
         
