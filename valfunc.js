@@ -66,10 +66,12 @@ function emailValidate() {
 
     if(email.value.match(emailSymbols)) {
         document.getElementById("emailCheck").style.color = "green";
+        hasEmail = true;
 
     }
     else {
         document.getElementById("emailCheck").style.color = "red";
+        hasEmail = false;
     }
 }
 
@@ -78,10 +80,14 @@ function emailValidate() {
 function validationStatus() {
     if(hasNumber && hasUppercase && hasLowercase && hasMinCharacters && hasEmail){
         document.getElementById("validateCheck").innerHTML = "SUCCESS";
-        hasEmail = true;
+        document.getElementById("buttonColor").style.backgroundColor = "green";
+        
     }
     else {
         document.getElementById("validateCheck").innerHTML = "FAILURE";
-        hasEmail = false;
+        document.getElementById("buttonColor").style.backgroundColor = "red";
+        
     }
 }
+
+//setInterval(validationStatus, 5000);
